@@ -7,8 +7,10 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 <a name="tabla-de-contenidos"></a>
 ## Tabla de contenidos
 
-1. [Instalación](#1-instalacion)
-2. [Arranque y funcionamiento](#2-funcionamiento)
+1. [Requisitos previos](#1-requisitos)
+   1. [Herramientas necesarias](#1-1-herramientas)
+   1. [Configuración de GIT](#1-2-git)
+2. [Despliegue y funcionamiento](#2-despliegue)
 3. [Cómo contribuir](#3-contribuciones)
    1. [Organización del repositorio](#3-1-repositorio)
    2. [Creación de características](#3-2-caracteristicas)
@@ -18,13 +20,36 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 6. [Autores](#6-autores)
 7. [Licencia](#7-licencia)
 
-<a name="1-instalacion"></a>
-## Instalación
+<a name="1-requisitos"></a>
+## Requisitos previos
 
-[TODO:]
+<a name="1-1-herramientas"></a>
+### Herramientas necesarias
 
-<a name="2-funcionamiento"></a>
-## Arranque y funcionamiento
+- [GIT](https://git-scm.com/download/win)
+- [nvm-windows](https://github.com/coreybutler/nvm-windows)
+- [Yarn](https://yarnpkg.com/)
+- [PM2](https://pm2.keymetrics.io/)
+
+<a name="1-2-git"></a>
+### Configuración de GIT
+
+Configurar variables globales de GIT para que los commits queden bien vinculados al usuario de GitHub que los realiza.
+
+```Shell
+git config --global user.name "usuario_github"
+git config --global user.email "email_github"
+```
+
+Los comandos anteriores configuran las variables de entorno de GIT a nivel global. En caso de querer utilizar un usuario distinto para un repositorio en particular, se puede usar la siguiente variante, **dentro del directorio del repositorio para el que se desea una configuración diferente**.
+
+```Shell
+git config user.name "usuario_github"
+git config user.email "email_github"
+```
+
+<a name="2-despliegue"></a>
+## Despliegue y funcionamiento
 
 [TODO:]
 
@@ -67,7 +92,7 @@ El registro de cambios se mantiene en un documento independiente, en la raíz de
 ## Autores
 
 - [Román Porras](https://github.com/romanporras)
-- [José Gimeno](https://github.com/jgiimenoperez)
+- [José Gimeno](https://github.com/jgimenoperez)
 
 <a name="7-licencia"></a>
 ## Licencia
