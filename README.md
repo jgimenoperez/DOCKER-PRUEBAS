@@ -41,11 +41,19 @@ git config --global user.name "usuario_github"
 git config --global user.email "email_github"
 ```
 
-Los comandos anteriores configuran las variables de entorno de GIT a nivel global. En caso de querer utilizar un usuario distinto para un repositorio en particular, se puede usar la siguiente variante, **dentro del directorio del repositorio para el que se desea una configuración diferente**.
+> #### Nota al margen:
+> 
+> Los comandos anteriores configuran las variables de entorno de GIT a nivel global. En caso de querer utilizar un usuario distinto para un repositorio en particular, se puede usar la siguiente variante, **dentro del directorio del repositorio para el que se desea una configuración diferente**.
+> 
+> ```Shell
+> git config user.name "usuario_github"
+> git config user.email "email_github"
+> ```
+
+Una vez configuradas las variables de entorno, procedemos a clonar el repositorio en local.
 
 ```Shell
-git config user.name "usuario_github"
-git config user.email "email_github"
+git clone https://github.com/acbiluminacion/acb-node-tools.git
 ```
 
 <a name="2-despliegue"></a>
