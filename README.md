@@ -13,8 +13,7 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 2. [Despliegue y funcionamiento](#2-despliegue)
 3. [Cómo contribuir](#3-contribuciones)
    1. [Organización del repositorio](#3-1-repositorio)
-   2. [Creación de características](#3-2-caracteristicas)
-   3. [Integración de código](#3-3-integracion)
+   3. [Integración de código](#3-2-integracion)
 4. [Roadmap](#4-roadmap)
 5. [Changelog](#5-changelog)
 6. [Autores](#6-autores)
@@ -59,7 +58,22 @@ git clone https://github.com/acbiluminacion/acb-node-tools.git
 <a name="2-despliegue"></a>
 ## Despliegue y funcionamiento
 
-[TODO:]
+### SRVAPPS
+
+El servidor de aplicaciones contiene tanto el código de producción, listo para ejecutar, como una copia de seguridad del repositorio completo de GitHub.
+
+#### Rutas y sincronización
+
+- `C:\acb\git`
+  - Directorio de ejecución
+  - `git pull origin/master`
+- `C:\acb\git-mirror`
+  - Directorio de copias de seguridad
+  - Renombramos la última copia
+  - `git clone --mirror`
+  - Borramos la copia vieja si el comando anterior no dio ningún error.
+
+**[TODO:]** Falta información
 
 <a name="3-contribuciones"></a>
 ## Cómo contribuir
@@ -67,18 +81,21 @@ git clone https://github.com/acbiluminacion/acb-node-tools.git
 <a name="3-1-repositorio"></a>
 ### Organización del repositorio
 
-- Las herramientas de ACB se gestionan en un repositorio único.
-- El repositorio se divide en varios proyectos.
-  - **[TODO]** Idealmente el repositorio multiproyecto se gestionará con la herramienta [Yarn](https://yarnpkg.com/). Pendiente de investigar más a fondo.
-  - Cada proyecto tendrá su propia rama de desarrollo.
-  - En la rama master sólo se integrarán las versiones estables de las ramas de proyecto.
+- Las herramientas se gestionan en un repositorio único. El repositorio contendrá tantos proyectos como desarrollos.
+- Árbol de directorios.
+  - La raíz contendrá archivos comunes a todos los proyectos
+  - Cada proyecto tendrá una carpeta independiente, almacenada directamente de la raíz del repositorio.
+  - **[TODO:]** Idealmente se usará la herramienta [Yarn](https://yarnpkg.com/) para gestionar los proyectos dentro del repositorio. Pendiente de investigar más a fondo.
+- Ramas de trabajo.
+  - Principal (rama única):
+    - Nombre: `master`
+    - Contenido: Sólo los desarrollos estables. El contenido de esta rama se ejecuta directamente en SRVAPPS.
+  - Características (tantas como desarrollos simultáneos se estén haciendo):
+    - Nombre: `proyecto/característica`
+    - Contenido: Pruebas, ejemplos, ideas, y en general código considerado inestable, no listo para producción.
+    - **IMPORTANTE: Todas las características nuevas deberán desarrollarse sobre una rama independiente, y nunca directamente sobre `master`**
 
-<a name="3-2-caracteristicas"></a>
-### Creación de características
-
-- Las características se desarrollan en ramas independientes **dentro de las ramas de cada proyecto**.
-
-<a name="3-3-integracion"></a>
+<a name="3-2-integracion"></a>
 ### Integración de código
 
 - La integración se realizará siempre mediante commits limpios usando el comando `rebase`
