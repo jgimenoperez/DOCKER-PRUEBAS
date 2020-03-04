@@ -111,6 +111,8 @@ Por seguridad, puede ser necesario bloquear algún archivo, para que otros miemb
 
 Mediante la extensión **Git LFS File Locking UI** de VS Code se pueden bloquear y desbloquear los archivos directamente desde la interfaz del IDE, sin pasar por la línea de comandos.
 
+En el archivo `.gitattributes` se ha definido, a nivel de repositorio, que se podrá bloquear cualquier archivo, siempre que se encuentre dentro de la carpeta `packages`.
+
 > **IMPORTANTE:**
 > 
 > Los comandos deben bloquearse **SIEMPRE** en la rama `master`.
