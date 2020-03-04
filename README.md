@@ -13,7 +13,8 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 2. [Despliegue y funcionamiento](#2-despliegue)
 3. [Cómo contribuir](#3-contribuciones)
    1. [Organización del repositorio](#3-1-repositorio)
-   3. [Integración de código](#3-2-integracion)
+   2. [Bloqueo de archivos](#3-2-bloqueos)
+   3. [Integración de código](#3-3-integracion)
 4. [Roadmap](#4-roadmap)
 5. [Changelog](#5-changelog)
 6. [Autores](#6-autores)
@@ -25,6 +26,8 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 <a name="1-1-herramientas"></a>
 ### Herramientas necesarias
 
+- [VS Code](https://code.visualstudio.com/)
+  - **Git LFS File Locking UI** (extensión)
 - [GIT](https://git-scm.com/download/win)
 - [nvm-windows](https://github.com/coreybutler/nvm-windows)
 - [Yarn](https://yarnpkg.com/)
@@ -53,6 +56,12 @@ Una vez configuradas las variables de entorno, procedemos a clonar el repositori
 
 ```Shell
 git clone https://github.com/acbiluminacion/acb-node-tools.git
+```
+
+Por último, activamos la funcionalidad LFS en el repositorio local, para poder hacer uso de los bloqueos de archivos a nivel centralizado.
+
+```Shell
+git lfs install
 ```
 
 <a name="2-despliegue"></a>
@@ -95,7 +104,20 @@ El servidor de aplicaciones contiene tanto el código de producción, listo para
     - Contenido: Pruebas, ejemplos, ideas, y en general código considerado inestable, no listo para producción.
     - **IMPORTANTE: Todas las características nuevas deberán desarrollarse sobre una rama independiente, y nunca directamente sobre `master`**
 
-<a name="3-2-integracion"></a>
+<a name="3-2-bloqueos"></a>
+### Bloqueo de archivos
+
+Por seguridad, puede ser necesario bloquear algún archivo, para que otros miembros del equipo no puedan sobrescribir el código compartido. En estos casos se debe usar la funcionalidad proporcionada por `git lfs`.
+
+Mediante la extensión **Git LFS File Locking UI** de VS Code se pueden bloquear y desbloquear los archivos directamente desde la interfaz del IDE, sin pasar por la línea de comandos.
+
+> **IMPORTANTE:**
+> 
+> Los comandos deben bloquearse **SIEMPRE** en la rama `master`.
+> De este modo, el bloqueo se extenderá al resto de ramas del repositorio.
+> Y **SIEMPRE** deberán desbloquearse en cuanto se haya terminado el trabajo sobre el archivo afectado.
+
+<a name="3-3-integracion"></a>
 ### Integración de código
 
 - La integración se realizará siempre mediante commits limpios usando el comando `rebase`
