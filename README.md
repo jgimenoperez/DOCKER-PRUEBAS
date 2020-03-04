@@ -30,6 +30,15 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
   - **Git LFS File Locking UI** (extensión)
 - [GIT](https://git-scm.com/download/win)
 - [nvm-windows](https://github.com/coreybutler/nvm-windows)
+   Gestor de node.js.
+   Permite instalar y usar diferentes versiones de node.js
+   Example:
+    nvm list available  
+    nvm install v0.10.24        Install a specific version number
+    nvm use 0.10                Use the latest available 0.10.x release
+    nvm run 0.10.24 myApp.js    Run myApp.js using node v0.10.24
+    nvm alias default 0.10.24   Set default node version on a shell
+
 - [Yarn](https://yarnpkg.com/)
 - [PM2](https://pm2.keymetrics.io/)
 
