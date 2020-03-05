@@ -40,7 +40,9 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
     - nvm alias default 0.10.24   Set default node version on a shell
 
 - [Yarn](https://yarnpkg.com/)
-   Gestor de procesos para NodeJS
+   - Gestor de paquetes y dependencias para NodeJS
+   - Permiten la capacidad de agregar e instalar dependencias desde varios archivos package.json en varias carpetas, sincronizando además las dependencias entre todos ellos.
+   - Ejecutas yarn install en la raíz y obtienes las dependencias de todos. Así de sencillo.
 - [PM2](https://pm2.keymetrics.io/)
    Gestor de procesos para NodeJS  Permite instalar y usar diferentes versiones de node.js
    Example:
