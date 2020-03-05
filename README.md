@@ -65,7 +65,7 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
       "No se puede cargar el archivo C:\Program Files\nodejs\pm2.ps1 porque la ejecución de scripts está deshabilitada en este sistema."
       Ejecutar Set-ExecutionPolicy Unrestricted» en un powershell con permisos de admin.
       
-      Para que los preocesos se autorranquen al reiniciar el servidor (para sistemas windows)
+      Para que los procesos se autorranquen al reiniciar el servidor (para sistemas windows)
 
       - npm install pm2 -g // instala pm2 de forma global
       - npm install pm2-windows-startup -g // instala pm2-windows-startup de forma global
