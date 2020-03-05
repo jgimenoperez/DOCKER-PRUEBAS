@@ -45,10 +45,9 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
       -Instalar npm npm install 
          -g pm2
       -Administrar procesos
-         -$ pm2 restart app_name
-         -$ pm2 reload app_name
-         -$ pm2 stop app_name
-         -$ pm2 delete app_name
+         -pm2 reload app_name
+         -pm2 stop app_name
+         -pm2 delete app_name
       -Muestra informacion 
          -pm2 list
       -Muestra últimos logs 
