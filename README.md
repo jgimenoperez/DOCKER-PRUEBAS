@@ -41,7 +41,7 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 
 - [Yarn](https://yarnpkg.com/)
 - [PM2](https://pm2.keymetrics.io/)
-   -Gestor de procesos para NodeJS
+   --Gestor de procesos para NodeJS
       -Instalar npm npm install 
          -g pm2
       -Administrar procesos
