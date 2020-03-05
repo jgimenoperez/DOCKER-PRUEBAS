@@ -41,6 +41,38 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 
 - [Yarn](https://yarnpkg.com/)
 - [PM2](https://pm2.keymetrics.io/)
+   -Gestor de procesos para NodeJS
+      -Instalar npm npm install 
+         -g pm2
+      -Administrar procesos
+         -$ pm2 restart app_name
+         -$ pm2 reload app_name
+         -$ pm2 stop app_name
+         -$ pm2 delete app_name
+      -Muestra informacion 
+         -pm2 list
+      -Muestra últimos logs 
+         -pm2 log
+      -Mostrar DashBoard      
+         -$ pm2 monit
+      -DashBoard Web
+         -$ pm2 plus
+      Puede ocurrir que a la hora de asignar el proceso al script de ejecución de PM2 de un error
+      "No se puede cargar el archivo C:\Program Files\nodejs\pm2.ps1 porque la ejecución de scripts está deshabilitada en este sistema."
+      Ejecutar Set-ExecutionPolicy Unrestricted» en un powershell con permisos de admin.
+      
+      Para que los preocesos se autorranquen al reiniciar el servidor (para sistemas windows)
+      npm install pm2 -g // instala pm2 de forma global
+      npm install pm2-windows-startup -g // instala pm2-windows-startup de forma global
+      pm2-startup install // configura el registro de Windows para que pm2 save  funcione
+      pm2 start myApp.js –name mySuperApp
+      pm2 save // ¡Ahora si sirve para algo!
+      reinicia la máquina….
+      pm2 status y verás tu proceso que se ha guardado perfectamente
+
+
+
+
 
 <a name="1-2-git"></a>
 ### Configuración de GIT
