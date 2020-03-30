@@ -27,6 +27,7 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 ### Herramientas necesarias
 
 - [Conexión con SQLSERVER](https://telerikhelper.net/2018/09/03/how-to-connect-your-node-js-app-with-sql-server/)
+  https://tediousjs.github.io/node-mssql/
 - [VS Code](https://code.visualstudio.com/)
   - **Git LFS File Locking UI** (extensión)
 - [GIT](https://git-scm.com/download/win)
