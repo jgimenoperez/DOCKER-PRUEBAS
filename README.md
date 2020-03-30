@@ -75,7 +75,7 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
       - reinicia la máquina….
       - pm2 status y verás tu proceso que se ha guardado perfectamente
 
-
+      - REvisar https://desarrolloweb.com/articulos/ejecutar-aplicacion-nodejs-pm2.html
 
 <a name="1-2-git"></a>
 ### Configuración de GIT
