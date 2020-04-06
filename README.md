@@ -153,6 +153,7 @@ El servidor de aplicaciones contiene tanto el código de producción, listo para
 <a name="3-2-depurar"></a>
 ### Depuración de código
 Depuración con React
+   - Ver https://elijahmanor.com/cra-debug-vscode/
    - Para depurar instalar la extensión en Visual Code Debugger for Chrome.
    - Añadir en el fichero de configuración launch.json la siguiente estructura
           ``` {
