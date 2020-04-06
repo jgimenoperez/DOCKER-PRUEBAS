@@ -13,8 +13,9 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 2. [Despliegue y funcionamiento](#2-despliegue)
 3. [Cómo contribuir](#3-contribuciones)
    1. [Organización del repositorio](#3-1-repositorio)
-   2. [Bloqueo de archivos](#3-2-bloqueos)
-   3. [Integración de código](#3-3-integracion)
+   2. [Depuración](#3-2-depurar)
+   3. [Bloqueo de archivos](#3-3-bloqueos)
+   4. [Integración de código](#3-4-integracion)
 4. [Roadmap](#4-roadmap)
 5. [Changelog](#5-changelog)
 6. [Autores](#6-autores)
@@ -149,8 +150,33 @@ El servidor de aplicaciones contiene tanto el código de producción, listo para
     - Nombre: `proyecto/característica`
     - Contenido: Pruebas, ejemplos, ideas, y en general código considerado inestable, no listo para producción.
     - **IMPORTANTE: Todas las características nuevas deberán desarrollarse sobre una rama independiente, y nunca directamente sobre `master`**
+<a name="3-2-depurar"></a>
+### Depuración de código
+Depuración con React
+   - Para depurar instalar la extensión en Visual Code Debugger for Chrome.
+   - Añadir en el fichero de configuración launch.json la siguiente estructura
+          ``` {
+               "name": "Chrome",
+               "type": "chrome",
+               "request": "launch",
+               "url": "http://localhost:3000",
+               "webRoot": "${workspaceRoot}",
+               "sourceMapPathOverrides": {
+                 "webpack:///src/*": "${webRoot}/*"
+               }
+         ```  }
+   - Lanzar el servidor con nmp start        
+   - Pulsar en el icono de ejecución y elegir la opcion Chrome   
+  
+  Depuración con fichero .js
+   - Se puede utilizar el propio entorno de visual Code, especificando cual es el fichero de inicio en la configuración.
+   - En el propio fichero launch.json se configurar el js de lanzamiento.
+   - Tambien se puede depurar desde el propio navegdor
+      -- ejecutar con node --inspect-brk .\debug.js
+      -- en el navegador poner chrome://inspect/#devices y pinchar en open dedicate devtools for node
+        
 
-<a name="3-2-bloqueos"></a>
+<a name="3-3-bloqueos"></a>
 ### Bloqueo de archivos
 
 Por seguridad, puede ser necesario bloquear algún archivo, para que otros miembros del equipo no puedan sobrescribir el código compartido. En estos casos se debe usar la funcionalidad proporcionada por `git lfs`.
@@ -165,7 +191,7 @@ En el archivo `.gitattributes` se ha definido, a nivel de repositorio, que se po
 > De este modo, el bloqueo se extenderá al resto de ramas del repositorio.
 > Y **SIEMPRE** deberán desbloquearse en cuanto se haya terminado el trabajo sobre el archivo afectado.
 
-<a name="3-3-integracion"></a>
+<a name="3-4-integracion"></a>
 ### Integración de código
 
 - La integración se realizará siempre mediante commits limpios usando el comando `rebase`
