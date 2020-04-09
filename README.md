@@ -97,9 +97,9 @@ El servidor de aplicaciones contiene tanto el código de producción, listo para
 
 - Las herramientas se gestionan en un repositorio único. El repositorio contendrá tantos proyectos como desarrollos.
 - Árbol de directorios.
-  - La raíz contendrá archivos comunes a todos los proyectos
+  - La raíz contendrá archivos comunes a todos los proyectos.
   - Cada proyecto tendrá una carpeta independiente, almacenada directamente de la raíz del repositorio.
-  - **[TODO:]** Idealmente se usará la herramienta [Yarn](https://yarnpkg.com/) para gestionar los proyectos dentro del repositorio. Pendiente de investigar más a fondo.
+  - Se usará la herramienta [Yarn](https://yarnpkg.com/) para gestionar las dependencias del repositorio. Y cada proyecto se configurará como un `workspace` separado.
 - Ramas de trabajo.
   - Principal (rama única):
     - Nombre: `master`
@@ -108,6 +108,7 @@ El servidor de aplicaciones contiene tanto el código de producción, listo para
     - Nombre: `proyecto/característica`
     - Contenido: Pruebas, ejemplos, ideas, y en general código considerado inestable, no listo para producción.
     - **IMPORTANTE: Todas las características nuevas deberán desarrollarse sobre una rama independiente, y nunca directamente sobre `master`**
+
 <a name="3-2-depurar"></a>
 ### Depuración de código
 Depuración con React
