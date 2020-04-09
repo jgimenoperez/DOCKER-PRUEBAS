@@ -29,56 +29,14 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
 
 - [Conexión con SQLSERVER](https://telerikhelper.net/2018/09/03/how-to-connect-your-node-js-app-with-sql-server/)
   https://tediousjs.github.io/node-mssql/
-- [VS Code](https://code.visualstudio.com/)
-  - **Git LFS File Locking UI** (extensión)
+- [VS Code](https://code.visualstudio.com/) y extensiones
+  - Git LFS File Locking UI
+  - ESLint
+  - Prettier Code formatter
 - [GIT](https://git-scm.com/download/win)
-- [nvm-windows](https://github.com/coreybutler/nvm-windows)
-   Gestor de node.js.
-   Permite instalar y usar diferentes versiones de node.js
-   Example:
-    - nvm list available  
-    - nvm install v0.10.24        Install a specific version number
-    - nvm use 0.10                Use the latest available 0.10.x release
-    - nvm run 0.10.24 myApp.js    Run myApp.js using node v0.10.24
-    - nvm alias default 0.10.24   Set default node version on a shell
-
-- [Yarn](https://yarnpkg.com/)
-   - Gestor de paquetes y dependencias para NodeJS
-   - Permiten la capacidad de agregar e instalar dependencias desde varios archivos package.json en varias carpetas, sincronizando además las dependencias entre todos ellos.
-   - Ejecutas yarn install en la raíz y obtienes las dependencias de todos. Así de sencillo.
-- [PM2](https://pm2.keymetrics.io/)
-   Gestor de procesos para NodeJS  Permite instalar y usar diferentes versiones de node.js
-   Example:
-    - Instalar npm npm install npm install pm2 -g
-    - Administrar procesos    
-       - pm2 restart app_name 
-       - pm2 reload app_name
-       - pm2 stop app_name
-       - pm2 delete app_name
-    - Muestra informacion 
-       - pm2 list
-    - Muestra últimos logs 
-       - pm2 log
-    - Mostrar DashBoard  
-       - pm2 monit
-    - DashBoard Web
-      - pm2 plus
-
-      Puede ocurrir que a la hora de asignar el proceso al script de ejecución de PM2 de un error
-      "No se puede cargar el archivo C:\Program Files\nodejs\pm2.ps1 porque la ejecución de scripts está deshabilitada en este sistema."
-      Ejecutar Set-ExecutionPolicy Unrestricted» en un powershell con permisos de admin.
-      
-      Para que los procesos se autorranquen al reiniciar el servidor (para sistemas windows)
-
-      - npm install pm2 -g // instala pm2 de forma global
-      - npm install pm2-windows-startup -g // instala pm2-windows-startup de forma global
-      - pm2-startup install // configura el registro de Windows para que pm2 save  funcione
-      - pm2 start myApp.js –name mySuperApp
-      - pm2 save // ¡Ahora si sirve para algo!
-      - reinicia la máquina….
-      - pm2 status y verás tu proceso que se ha guardado perfectamente
-
-      - REvisar https://desarrolloweb.com/articulos/ejecutar-aplicacion-nodejs-pm2.html
+- [nvm-windows](https://github.com/coreybutler/nvm-windows) ([CheatSheet](cheatsheet-nvm.md))
+- [Yarn](https://yarnpkg.com/) ([CheatSheet](cheatsheet-yarn.md))
+- [PM2](https://pm2.keymetrics.io/) ([CheatSheet](cheatsheet-pm2.md))
 
 <a name="1-2-git"></a>
 ### Configuración de GIT
