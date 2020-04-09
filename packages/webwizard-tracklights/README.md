@@ -1,3 +1,20 @@
+# webwizard-tracklights
+
+Proyecto frontend basado en React, Redux, Material-UI y Paper.js para la creación de un configurador de productos para carriles electrificados.
+
+## Consideraciones previas
+
+Se han instalado paquetes para la corrección y formateo de código automáticos como dependencias de desarrollo.
+Es necesario lanzar `yarn install` sobre la raíz del repositorio, y contar con las extensiones de VSCode indicadas en el `README.md` principal.
+
+Paquetes instalados:
+
+```
+yarn add prettier eslint eslint-config-prettier eslint-plugin-prettier --dev
+```
+
+# Sección creada por Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
