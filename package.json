@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "name": "acb-node-tools",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        
+    },
+    "version": "1.0.0",
+    "description": "Herramientas basadas en NodeJS de ACB",
+    "main": "index.js",
+    "repository": "https://github.com/acbiluminacion/acb-node-tools.git",
+    "author": "romanporras <j.romanporras@gmail.com>",
+    "license": "MIT"
+}
