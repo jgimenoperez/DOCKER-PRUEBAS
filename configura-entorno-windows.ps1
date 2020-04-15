@@ -121,6 +121,7 @@ function testVSCODE() {
   Write-Host "  Es necesario instalar manualmente las siguientes extensiones:"
   Write-Host "  - ESLint"
   Write-Host "  - Prettier - Code Formatter"
+  Write-Host "  - Git LFS File Locking UI"
 }
 testVSCODE
 
