@@ -1,1 +1,19 @@
+# Permitimos a GIT LFS bloquear cualquier archivo dentro de los proyectos
 packages/* lockable
+
+# Especificamos que core.autocrlf debe ser auto
+# en caso de que no esté especificado individualmente
+* text=auto
+
+# Archivos que siempre queremos que se normalicen
+*.css text
+*.html text
+*.js text
+*.json text
+*.md text
+*.ts text
+
+# Archivos que son de contenido binario
+# no es necesario que se modifiquen.
+*.png binary
+*.jpg binary

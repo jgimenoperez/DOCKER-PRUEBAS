@@ -33,7 +33,7 @@ Herramientas basadas en [NodeJS](https://github.com/nodejs/node) para conexión 
   - Git LFS File Locking UI
   - ESLint
   - Prettier Code formatter
-- [GIT](https://git-scm.com/download/win)
+- [GIT](https://git-scm.com/download/win) ([CheatSheet](cheatsheet-git.md))
 - [nvm-windows](https://github.com/coreybutler/nvm-windows) ([CheatSheet](cheatsheet-nvm.md))
 - [Yarn](https://yarnpkg.com/) ([CheatSheet](cheatsheet-yarn.md))
 - [PM2](https://pm2.keymetrics.io/) ([CheatSheet](cheatsheet-pm2.md))
