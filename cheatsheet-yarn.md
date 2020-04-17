@@ -25,13 +25,18 @@ yarn add <paquete> --dev
 yarn global add <paquete>
 ```
 
-Para que recopile las dependencias de todos los proyectos y las organice en la raíz del repositorio:
+Recopilar las dependencias de todos los proyectos y las organizarlas en la raíz del repositorio
 
 ```
-// En las carpetas de proyecto
-yarn add <paquete1,2,3>
-yarn add <paquete4,5,6> --dev
-
-// En la raíz del repositorio
+// Ejecutar yarn en la raíz del repositorio
 yarn install
+```
+
+## Resolución de problemas
+
+Reinstalar todas las dependencias del repositorio. 
+Incluso las que ya estaban instaladas.
+
+```
+yarn install --force
 ```
