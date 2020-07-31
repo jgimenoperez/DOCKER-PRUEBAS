@@ -8,3 +8,7 @@ setInterval(function(){
   console.log('sending work');
   sock.send('some work');
 }, 500);
+
+// WORKERS----->conecta con----->PRODUCERSF
+//console.log('tcp://' + process.env.ipworker +':3000');
+//sock.bindSync('tcp://10.1.0.100:3000');

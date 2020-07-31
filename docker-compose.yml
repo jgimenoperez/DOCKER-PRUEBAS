@@ -5,13 +5,17 @@ services:
     worker_nodezqm:
         image: node_zmq
         container_name: worker_nodezqm
-        entrypoint: node worker.js
         networks:
             test:
                 ipv4_address: '10.1.0.100'
+        environment:
+            ipproducer: 10.1.0.101             
+        entrypoint: node worker.js                
 
     producer_nodezqm:
         image: node_zmq
+        depends_on: 
+            - worker_nodezqm
         container_name: producer_nodezqm
         entrypoint: node producer.js
         networks:
