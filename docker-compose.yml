@@ -10,7 +10,8 @@ services:
                 ipv4_address: '10.1.0.100'
         environment:
             ipproducer: 10.1.0.101             
-        entrypoint: node worker.js                
+        entrypoint: node worker.js
+        restart: always                
 
     producer_nodezqm:
         image: node_zmq
@@ -21,6 +22,7 @@ services:
         networks:
             test:
                 ipv4_address: '10.1.0.101'
+        restart: always
 
     pubber_nodezqm:
         image: node_zmq
@@ -28,7 +30,8 @@ services:
         entrypoint: node pubber.js
         networks:
             test:
-                ipv4_address: '10.1.0.102'     
+                ipv4_address: '10.1.0.102'
+        restart: always                     
 
     subber_nodezqm:
         image: node_zmq
@@ -38,7 +41,8 @@ services:
                 ipv4_address: '10.1.0.103'
         environment:
             ippubber: 10.1.0.102            
-        entrypoint: node subber.js   
+        entrypoint: node subber.js
+        restart: always   
 
 
 
