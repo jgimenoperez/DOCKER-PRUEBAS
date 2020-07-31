@@ -22,6 +22,26 @@ services:
             test:
                 ipv4_address: '10.1.0.101'
 
+    pubber_nodezqm:
+        image: node_zmq
+        container_name: pubber_nodezqm
+        entrypoint: node pubber.js
+        networks:
+            test:
+                ipv4_address: '10.1.0.102'     
+
+    subber_nodezqm:
+        image: node_zmq
+        container_name: subber_nodezqm
+        networks:
+            test:
+                ipv4_address: '10.1.0.103'
+        environment:
+            ippubber: 10.1.0.102            
+        entrypoint: node subber.js   
+
+
+
 networks:
   test:
     ipam:
