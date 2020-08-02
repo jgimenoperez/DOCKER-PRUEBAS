@@ -1,16 +1,23 @@
 {
-    "private": true,
-    "name": "acb-node-tools",
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        
-    },
-    "version": "1.0.0",
-    "description": "Herramientas basadas en NodeJS de ACB",
-    "main": "index.js",
-    "repository": "https://github.com/acbiluminacion/acb-node-tools.git",
-    "author": "romanporras <j.romanporras@gmail.com>",
-    "license": "MIT"
+  "name": "acb-node-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acbiluminacion/acb-node-tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acbiluminacion/acb-node-tools/issues"
+  },
+  "homepage": "https://github.com/acbiluminacion/acb-node-tools#readme",
+  "dependencies": {
+    "zeromq": "^5.2.0"
+  }
 }

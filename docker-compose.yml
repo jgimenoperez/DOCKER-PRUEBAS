@@ -1,0 +1,54 @@
+version: '3.3'
+    #docker run -d -p 9000:9000 --name portainer --restart=always -v "/var/run/docker.sock:/var/run/docker.sock" portainer/por
+services:
+                   
+    worker_nodezqm:
+        image: node_zmq
+        container_name: worker_nodezqm
+        networks:
+            test:
+                ipv4_address: '10.1.0.100'
+        environment:
+            ipproducer: 10.1.0.101             
+        entrypoint: node worker.js
+        restart: always                
+
+    producer_nodezqm:
+        image: node_zmq
+        depends_on: 
+            - worker_nodezqm
+        container_name: producer_nodezqm
+        entrypoint:  node producer.js
+        networks:
+            test:
+                ipv4_address: '10.1.0.101'
+        restart: always
+
+    pubber_nodezqm:
+        image: node_zmq
+        container_name: pubber_nodezqm
+        entrypoint: node pubber.js
+        networks:
+            test:
+                ipv4_address: '10.1.0.102'
+        restart: always                     
+
+    subber_nodezqm:
+        image: node_zmq
+        container_name: subber_nodezqm
+        networks:
+            test:
+                ipv4_address: '10.1.0.103'
+        environment:
+            ippubber: 10.1.0.102            
+        entrypoint: node subber.js
+        restart: always   
+
+
+
+networks:
+  test:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/24                
