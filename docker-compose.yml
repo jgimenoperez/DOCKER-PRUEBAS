@@ -3,7 +3,7 @@ version: '3.3'
 services:
                    
     worker_nodezqm:
-        image: node_zmq
+        image: puzolmongol/nodezmq:latest
         container_name: worker_nodezqm
         networks:
             test:
@@ -14,7 +14,7 @@ services:
         restart: always                
 
     producer_nodezqm:
-        image: node_zmq
+        image: puzolmongol/nodezmq:latest
         depends_on: 
             - worker_nodezqm
         container_name: producer_nodezqm
@@ -25,7 +25,7 @@ services:
         restart: always
 
     pubber_nodezqm:
-        image: node_zmq
+        image: puzolmongol/nodezmq:latest
         container_name: pubber_nodezqm
         entrypoint: node pubber.js
         networks:
@@ -34,7 +34,7 @@ services:
         restart: always                     
 
     subber_nodezqm:
-        image: node_zmq
+        image: puzolmongol/nodezmq:latest
         container_name: subber_nodezqm
         networks:
             test:

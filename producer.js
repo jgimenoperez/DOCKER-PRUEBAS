@@ -6,7 +6,7 @@ console.log('Producer bound to port 3000');
 
 setInterval(function(){
   console.log('sending work');
-  sock.send('some work');
+  sock.send('some work 1');
 }, 500);
 
 // WORKERS----->conecta con----->PRODUCERSF
