@@ -7,6 +7,6 @@ RUN npm install
 #RUN npm install -g pm2
 COPY . .
 #RUN pm2 start producer.js
-#9
+#10
 #CMD [ "node","producer.js" ]
 #docker build -t node_zmq .
