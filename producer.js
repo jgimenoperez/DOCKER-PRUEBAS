@@ -5,8 +5,8 @@ sock.bindSync('tcp://10.1.0.101:3000');
 console.log('Producer bound to port 3000');
 
 setInterval(function(){
-  console.log('sending work 4');
-  sock.send('some work 4');
+  console.log('sending work 5');
+  sock.send('some work 5');
 }, 500);
 
 // WORKERS----->conecta con----->PRODUCERSF
