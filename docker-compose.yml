@@ -63,3 +63,5 @@ networks:
 
         #./run.sh
         # sudo dockerd
+        # sudo mkdir /sys/fs/cgroup/systemd
+        # sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
