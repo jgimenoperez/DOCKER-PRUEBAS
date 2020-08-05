@@ -45,12 +45,13 @@ services:
         restart: always   
     
 
-    watchtower:
-        image: v2tec/watchtower
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - /root/.docker/config.json:/config.json
-        command: --interval 30
+  #  watchtower:
+  #      image: v2tec/watchtower
+  #      volumes:
+  #          - /var/run/docker.sock:/var/run/docker.sock
+  #          - /root/.docker/config.json:/config.json
+  #      command: --interval 30
+  #docker run -d   --name watchtower   -v /var/run/docker.sock:/var/run/docker.sock   v2tec/watchtower --interval 5
 
 networks:
   test:
@@ -58,3 +59,7 @@ networks:
       driver: default
       config:
         - subnet: 10.1.0.0/24                
+
+
+        #./run.sh
+        # sudo dockerd
